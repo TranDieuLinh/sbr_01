@@ -1,0 +1,21 @@
+{
+  "name": "book_social",
+  "description": "",
+  "main": "",
+  "authors": [
+    "To Minh Phong <phongtmitbka@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index.php",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
