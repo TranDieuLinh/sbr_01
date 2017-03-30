@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 col-xs-12 col-sm-6">
     <div class="product-image-wrapper polaroid">
         <div class="productinfo text-center margin-top">
             <div class="saishou">
