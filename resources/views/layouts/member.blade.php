@@ -1,11 +1,8 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3>
-            <a href="">
+            <a href="{{ route('member.show', $member->id) }}">
                 {{ $member->name }}
-                <small> 
-                    {{ $member->new_reviews }}
-                </small>
             </a>
         </h3>
         <h4>
@@ -13,18 +10,17 @@
         </h4>
     </div>
     <div class="panel-body">
-        <div>
-            <div class="col-md-4">
-                <a href="">
-                    <img class="img-thumbnail" src="{{ $member->avatar }}" class="avatar" alt="{{ $member->name }}">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <h3>{{ trans('app.about') }} {{ $member->name }}</h3>
-                <p>
-                    {{ $member->about }} 
-                </p>
-            </div>                          
+        <div class="col-md-4">
+            <a href="{{ route('member.show', $member->id) }}">
+                <img class="img-thumbnail" src="{{ asset($member->avatar) }}" class="avatar" alt="{{ $member->name }}">
+            </a>
         </div>
+        <div class="col-md-8">
+            <h3>{{ trans('app.about') }} {{ $member->name }}</h3>
+            <p>
+                {!! str_limit($member->about, $limit = config('view.limit_about'), $end = '...') !!}
+            </p>
+            <br>
+        </div>                          
     </div>
 </div>

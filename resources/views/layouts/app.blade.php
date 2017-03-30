@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href ="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
     @yield('css')
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -42,7 +44,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/home') }}">{{ trans('app.home') }}</a></li>
-                        <li><a href="#">{{ trans('app.book') }}</a></li>
+                        <li><a href="{{ url('/book') }}">{{ trans('app.book') }}</a></li>
                         <li><a href="#">{{ trans('app.rank') }}</a></li>
                     </ul>
                     <ul class="navbar-nav nav col-md-5">
@@ -63,11 +65,22 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> {{ trans('app.login') }}</a></li>
-                            <li><a href="{{ route('register') }}">{{ trans('app.register') }}</a></li>
+                            <li>
+                                <a href="{{ route('login') }}">
+                                    <span class="glyphicon glyphicon-log-in"></span> 
+                                    {{ trans('app.login') }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('register') }}">
+                                    {{ trans('app.register') }}
+                                </a>
+                            </li>
                         @else
-                            <li><a href="">
-                                <span><img src="{{ asset(Auth::user()->avatar) }}" id="avatar_header"></span>
+                            <li><a href="{{ route('member.show', Auth::user()->id) }}">
+                                <span>
+                                    <img src="{{ asset(Auth::user()->avatar) }}" id="avatar_header">
+                                </span>
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>

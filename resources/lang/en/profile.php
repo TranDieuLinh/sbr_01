@@ -13,6 +13,7 @@ return [
     'change_password' => 'Change password',
     'new_review' => 'new review',
     'all_following' => 'All member followings',
+    'my_favorites' => 'My favorites',
 
     'button' => [
         'update' => 'Update',

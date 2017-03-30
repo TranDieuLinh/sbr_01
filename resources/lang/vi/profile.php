@@ -8,6 +8,12 @@ return [
     'avatar' => 'Ảnh đại diện',
     'cover_photo' => 'Ảnh bìa',
     'email' => 'Email',
+    'password' => 'Mật khẩu',
+    're_password' => 'Nhập lại mật khẩu',
+    'change_password' => 'Đổi mật khẩu',
+    'new_review' => 'review mới',
+    'all_following' => 'Thành viên đang theo dõi',
+    'my_favorites' => 'Yêu thích',
 
     'button' => [
         'update' => 'Cập nhật',

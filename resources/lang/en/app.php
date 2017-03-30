@@ -42,6 +42,11 @@ return [
     'language' => 'Language',
     'english' => 'English',
     'vietnamese' => 'Vietnamese',
+    'favorite' => 'Favorite',
+    'category' => 'Category',
+    'livestream' => 'Livestream',
+    'search_review' => 'Search review',
+    'full_video' => 'Full video',
     'confirm_message' => ' Your confirmation is completed. Please click the link ot get access ',
 
     'message' => [
