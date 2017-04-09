@@ -8,11 +8,13 @@ use App\Repositories\Eloquent\CategoryRepository;
 use App\Repositories\Eloquent\BookRepository;
 use App\Repositories\Eloquent\RequestBookRepository;
 use App\Repositories\Eloquent\ReviewRepository;
+use App\Repositories\Eloquent\UserBookRepository;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Repositories\Contracts\ReviewRepositoryInterface;
 use App\Repositories\Contracts\CategoryRepositoryInterface;
 use App\Repositories\Contracts\BookRepositoryInterface;
 use App\Repositories\Contracts\RequestBookRepositoryInterface;
+use App\Repositories\Contracts\UserBookRepositoryInterface;
 use App;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -39,5 +41,6 @@ class RepositoryServiceProvider extends ServiceProvider
         App::bind(BookRepositoryInterface::class, BookRepository::class);
         App::bind(RequestBookRepositoryInterface::class, RequestBookRepository::class);
         App::bind(ReviewRepositoryInterface::class, ReviewRepository::class);
+        App::bind(UserBookRepositoryInterface::class, UserBookRepository::class);
     }
 }

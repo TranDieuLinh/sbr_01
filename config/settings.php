@@ -24,5 +24,6 @@ return [
     ],
     'pagination' => [
         'limit' => 12,
+        'limit-sidebar' => 5,
     ],
 ];

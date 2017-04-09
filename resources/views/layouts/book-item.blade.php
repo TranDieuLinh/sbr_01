@@ -6,8 +6,8 @@
                     <img name="image" src="{{ $book->image }}" title="{{ $book->title }}"/></a>
             </div>
             <div class="saigo" style="display: none">
-                <a href="" class="margin btn btn-custom btn-success green"><i
-                            class="fa fa-book fa-fw"></i>@lang('sidebar.show')
+                <a href="{{ route('book.show', $book->id) }}" class="margin btn btn-custom btn-success green">
+                    <i class="fa fa-book fa-fw"></i>@lang('sidebar.show')
                 </a>
                 <a href="" class="btn btn-custom btn-success green"><i
                             class="fa fa-pencil fa-fw"></i>@lang('sidebar.review')

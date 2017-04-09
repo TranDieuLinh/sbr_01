@@ -11,4 +11,6 @@ interface BookRepositoryInterface extends RepositoryInterface
     public function findMostPopular();
 
     public function search($search);
+
+    public function theSameCategory($id, $category_id);
 }

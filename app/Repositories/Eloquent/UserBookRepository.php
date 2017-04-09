@@ -21,4 +21,16 @@ class UserBookRepository extends BaseRepository implements UserBookRepositoryInt
     {
         return $this->model->where('favorite', 1);
     }
+
+    public function findRate($book_id, $user_id)
+    {
+        return $this->model->where(['book_id' => $book_id, 'user_id' => $user_id])
+            ->where('rate', '<>', 0);
+    }
+
+    public function findLikeByBookId ($book_id)
+    {
+        return $this->model->where('book_id', $book_id)
+            ->where('like', '<>', 0);
+    }
 }

@@ -86,4 +86,11 @@ class BookRepository extends BaseRepository implements BookRepositoryInterface
             ->orWhere('title', 'like', '%' . $search . '%')
             ->limit(config('settings.book.limit'));
     }
+
+    public function theSameCategory($id, $category_id)
+    {
+        return $this->model->where('category_id', $category_id)
+            ->where('id', '<>', $id)
+            ->orderBy('score', 'desc');
+    }
 }
